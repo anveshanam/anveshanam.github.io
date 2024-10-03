@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anveshanam - Research Society IIT Gandhinagar</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        .logo {
+            width: 100px;
+            height: 100px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+        }
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+        .slide {
+            display: none;
+            animation: fade 1.5s ease-in-out;
+        }
+        .slide img {
+            height:100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0,0,0,0.8);
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.9);
+        }
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+        @media only screen and (max-width: 768px) {
+            .prev, .next {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+    </style>
+    <style>
+        body {
+            font-family: 'Calibri', sans-serif;
+            background-color: #f0f8ff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #3b82f6;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+        .nav-link:hover::after {
+            transform: scaleX(1);
+        }
+        .slideshow-container {
+            position: relative;
+            max-height: 900px;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+        }
+        .mySlides {
+            display: none;
+            text-align: center;
+        }
+        .mySlides img {
+            max-height: 500px;
+            max-width: 10px;
+            height: auto;
+            object-fit: cover;
+        }
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0,0,0,0.8);
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.5);
+        }
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+    </style>
+</head>
+<body class="bg-blue-50">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="/Users/himanshu/Desktop/Anveshanam/teams/anveshanamLOGO.png" alt="Anveshanam Logo" class="h-12 w-12 mr-3">
+                    <a href="#" class="text-gray-800 text-xl font-bold">Anveshanam (अन्वेषणम्)</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#about" class="nav-link text-gray-800 hover:text-blue-500">About</a>
+                    <a href="#events" class="nav-link text-gray-800 hover:text-blue-500">Events</a>
+                    <a href="#team" class="nav-link text-gray-800 hover:text-blue-500">Team</a>
+                    <a href="#contact" class="nav-link text-gray-800 hover:text-blue-500">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto mt-8">
+        <section id="hero" class="text-center py-16 bg-blue-100 rounded-lg shadow-md" style="margin-top: 20px;">
+            <h1 class="text-4xl font-bold mb-4">Welcome to Anveshanam (अन्वेषणम्)</h1>
+            <p class="text-xl mb-8">The vibrant hub of exploration and discovery at IIT Gandhinagar</p>
+            <a href="#about" class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition duration-300">Learn More</a>
+            <br/>
+        </section>
+        <section id="about" class="my-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">About Us</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <p class="mb-4">
+                        <i>
+                            Welcome to Anveshanam, the vibrant hub of exploration and discovery at IIT Gandhinagar! We are a dynamic club dedicated to fostering a culture of research and innovation within the academic community.
+                        </i>
+                    </p>
+                    <h3 class="text-2xl font-semibold mb-2">What We Do</h3>
+                    <p class="mb-4"><i>Our diverse range of activities extends from forging meaningful collaborations with esteemed faculty and industry experts to curating impactful seminars and workshops. But that's not all – we strive to provide hands-on experiences at several stages of academic pursuit that empower students to delve into their academic passions.</i></p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-2">Vision</h3>
+                    <p><i>Our mission is to provide a platform for students to immerse in intellectual engagement and support them in various possible ways to embark on a research-oriented career. Research, its intricacies, and the compelling reasons for choosing a research-driven career are often mysteries to many, especially those at the undergraduate level. Anveshanam endeavors to provide them with a firsthand experience, unveiling the motivations that drive researchers and offering them a taste of this journey.</i></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="events" class="my-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">Events</h2>
+           
+        <section id="upcoming-events" class="mb-12">
+            <h3 class="text-2xl font-semibold mb-4">Upcoming Events</h3>
+            <div class="slideshow-container upcoming-slideshow">
+                <div class="slide">
+                    <img src="/Users/himanshu/Desktop/Anveshanam/posters/AI_ML_Dr. Derek Lomas.jpeg" alt="Upcoming Event 1">
+                    <div class="slide-content">
+                        <h3 class="text-xl font-semibold">Upcoming Event 1 Title</h3>
+                        <p>Upcoming Event 1 description goes here.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="/Users/himanshu/Desktop/Anveshanam/posters/Career in Academia_DR. Utsav Mannu.png" alt="Upcoming Event 2">
+                    <div class="slide-content">
+                        <h3 class="text-xl font-semibold">Upcoming Event 2 Title</h3>
+                        <p>Upcoming Event 2 description goes here.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="/Users/himanshu/Desktop/Anveshanam/posters/Data Visualization_ Dr. Manasi Kanetkar.jpeg" alt="Upcoming Event 3">
+                    <div class="slide-content">
+                        <h3 class="text-xl font-semibold">Upcoming Event 3 Title</h3>
+                        <p>Upcoming Event 3 description goes here.</p>
+                    </div>
+                </div>
+                <a class="prev" onclick="changeSlide(-1, 'upcoming')">&#10094;</a>
+                <a class="next" onclick="changeSlide(1, 'upcoming')">&#10095;</a>
+            </div>
+        </section>
+
+        <section id="past-events" class="mb-12">
+            <h3 class="text-2xl font-semibold mb-4">Past Events</h3>
+            <div class="slideshow-container past-slideshow">
+                <div class="slide">
+                    <img src="/Users/himanshu/Desktop/Anveshanam/posters/PHD Movie 1.png" alt="Past Event 1">
+                    <div class="slide-content">
+                        <h3 class="text-xl font-semibold">Past Event 1 Title</h3>
+                        <p>Past Event 1 description goes here.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="/Users/himanshu/Desktop/Anveshanam/posters/PHD Movie 2.png" alt="Past Event 2">
+                    <div class="slide-content">
+                        <h3 class="text-xl font-semibold">Past Event 2 Title</h3>
+                        <p>Past Event 2 description goes here.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="/Users/himanshu/Desktop/Anveshanam/posters/SERB PMRF.png" alt="Past Event 3">
+                    <div class="slide-content">
+                        <h3 class="text-xl font-semibold">Past Event 3 Title</h3>
+                        <p>Past Event 3 description goes here.</p>
+                    </div>
+                </div>
+                <a class="prev" onclick="changeSlide(-1, 'past')">&#10094;</a>
+                <a class="next" onclick="changeSlide(1, 'past')">&#10095;</a>
+            </div>
+        </section>
+
+        <section id="team" class="my-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">Our Team</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="/Users/himanshu/Desktop/Anveshanam/teams/Rajdeep.JPG" alt="Team Member 1" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-center">Rajdeep Singh Devra</h3>
+                    <p class="text-center"><i>Club Secretary</i></p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="/Users/himanshu/Desktop/Anveshanam/teams/himanshubeniwal.jpg" alt="Team Member 2" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-center">Himanshu Beniwal</h3>
+                    <p class="text-center"><i>Web Development Team</i></p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="/Users/himanshu/Desktop/Anveshanam/teams/muskanjindal.jpg" alt="Team Member 3" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-center">Muskan Jindal</h3>
+                    <p class="text-center"><i>Editorial Team</i></p>
+                </div>
+            </div>
+            <br />
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="/Users/himanshu/Desktop/Anveshanam/teams/nsramanathan.jpg" alt="Team Member 1" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-center">N S Ramanathan</h3>
+                    <p class="text-center"><i>Outreach Coordinator</i></p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="/Users/himanshu/Desktop/Anveshanam/teams/harshjaitwal.jpg" alt="Team Member 2" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-center">Harsh Jaitwal</h3>
+                    <p class="text-center"><i>Social Media Team</i></p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="/Users/himanshu/Desktop/Anveshanam/teams/nilanshsharma.jpeg" alt="Team Member 3" class="w-32 h-32 rounded-full mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-2 text-center">Nilansh Sharma</h3>
+                    <p class="text-center"><i>Editorial Team</i></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="my-16 bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold mb-8 text-center">Contact Us</h2>
+            <div class="flex flex-wrap justify-center items-center space-x-4">
+                <a href="mailto:anveshanam@iitgn.ac.in" class="flex items-center mb-4">
+                    <i class="fas fa-envelope mr-2 text-blue-500"></i>
+                    <span>anveshanam@iitgn.ac.in</span>
+                </a>
+                <a href="tel:+919782579414" class="flex items-center mb-4">
+                    <i class="fas fa-phone mr-2 text-blue-500"></i>
+                    <span>+91 97825 79414</span>
+                </a>
+                <a href="https://www.instagram.com/anveshanam_iitgn/" target="_blank" rel="noopener noreferrer" class="flex items-center mb-4">
+                    <i class="fab fa-instagram mr-2 text-blue-500"></i>
+                    <span>@anveshanam_iitgn</span>
+                </a>
+                <a href="https://in.linkedin.com/in/anveshanam-iitgn-b81a1a243" target="_blank" rel="noopener noreferrer" class="flex items-center mb-4">
+                    <i class="fab fa-linkedin mr-2 text-blue-500"></i>
+                    <span>Anveshanam IITGN</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Anveshanam - Research Society IIT Gandhinagar. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        class Slideshow {
+            constructor(container, type) {
+                this.container = container;
+                this.type = type;
+                this.slides = container.querySelectorAll('.slide');
+                this.index = 0;
+                this.totalSlides = this.slides.length;
+                this.showSlide(this.index);
+                this.autoAdvance();
+            }
+
+            showSlide(n) {
+                this.index = (n + this.totalSlides) % this.totalSlides;
+                this.slides.forEach(slide => slide.style.display = 'none');
+                this.slides[this.index].style.display = 'block';
+            }
+
+            changeSlide(n) {
+                this.showSlide(this.index + n);
+            }
+
+            autoAdvance() {
+                setInterval(() => this.changeSlide(1), 5000);
+            }
+        }
+
+        // Initialize slideshows
+        const upcomingSlideshow = new Slideshow(document.querySelector('.upcoming-slideshow'), 'upcoming');
+        const pastSlideshow = new Slideshow(document.querySelector('.past-slideshow'), 'past');
+
+        // Global function to change slides (for onclick events)
+        function changeSlide(n, type) {
+            if (type === 'upcoming') {
+                upcomingSlideshow.changeSlide(n);
+            } else if (type === 'past') {
+                pastSlideshow.changeSlide(n);
+            }
+        }
+    </script>
+</body>
+</html>
